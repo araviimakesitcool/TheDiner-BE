@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS "user" (
+    id SERIAL PRIMARY KEY,
+    createdOn TIMESTAMP,
+    updatedOn TIMESTAMP,
+    userName VARCHAR(255) NOT NULL,
+    emailId VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    deleted BOOLEAN DEFAULT FALSE,
+    version INTEGER DEFAULT 0
+);
